@@ -53,6 +53,7 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 
 def _load_pickle(filename: str):
     candidates = [
+        ROOT_DIR / "models" / filename,
         ROOT_DIR / filename,
         ROOT_DIR / "notebook" / filename,
         Path.cwd() / filename,
